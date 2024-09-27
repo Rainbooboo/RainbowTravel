@@ -8,13 +8,13 @@
 }
 
 :root {
-  --PrimaryColor: hs1(199, 100%, 33%);
-  --SecondaryColor: hs1(187, 85%, 43%);
-  --gradientColor: linear-gradient(to right, hsl(85%, 43%), hs1(199, 100%, 33%));
-  --whiteColor: hs1(0, 0%, 100%);
-  --blackColor: hs1(201, 33%, 16%);
-  --textColor: hs1(240, 4%, 36%);
-  --whiteColorDeam: hs1(0, 0%, 93%);
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
   --greyText: rgb(190, 190, 190);
   --inputColor: rgb(239, 239, 239);
   --bodyColor: rgb(240, 240, 246);
@@ -29,7 +29,7 @@ li {
   list-style: none;
 }
 
-section {
+.section {
   padding: 4rem 0 2rem;
 }
 
@@ -55,7 +55,7 @@ section {
 
 .btn {
   padding: .6rem 1.5rem;
-  background: var(-- gradientColor);
+  background: var(--gradientColor);
   border-radius: 3rem;
   border: none;
   outline: none;

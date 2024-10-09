@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
 import './navbar.scss';
-import { MdTravelExplore } from "react-icons/md";
 import { IoIosCloseCircle } from "react-icons/io";
 import { TbGridDots } from "react-icons/tb";
 import img from '../../assets/logo.png'

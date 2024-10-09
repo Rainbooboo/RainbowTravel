@@ -2,7 +2,6 @@ import React, {useEffect} from "react";
 import './footer.scss';
 import video from "../../assets/beach.mp4";
 import { FiChevronRight, FiSend } from "react-icons/fi";
-import { MdOutlineTravelExplore } from "react-icons/md";
 import { AiFillInstagram, AiFillYoutube, AiOutlineTwitter } from "react-icons/ai";
 import { FaTripadvisor } from "react-icons/fa";
 import Aos from 'aos';

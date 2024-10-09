@@ -21,6 +21,10 @@
   --cardGB: rgb(225, 225, 235);
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }
@@ -71,8 +75,7 @@ li {
   background-color: var(--SecondaryColor);
 }
 
-img,
-video {
+img, video {
   width: 100%;
   height: auto;
 }
@@ -83,4 +86,20 @@ input {
 
 body {
   background: var(--bodyColor);
+}
+
+/* Media Queries */
+@media screen and (min-width: 1240px) {
+  .container {
+    width: 80% !important;
+    margin: auto !important;
+  }
+  .section{
+    padding: 6rem 0 4rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  body {
+    zoom: 1.7;
+  }
 }

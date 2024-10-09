@@ -1,9 +1,10 @@
 import React from 'react'
 import { useState } from 'react';
-import './navbar.css';
+import './navbar.scss';
 import { MdTravelExplore } from "react-icons/md";
 import { IoIosCloseCircle } from "react-icons/io";
 import { TbGridDots } from "react-icons/tb";
+import img from '../../assets/logo.png'
 
 const Navbar = () => {
     const  [active, setaActive] = useState('navBar');
@@ -22,7 +23,8 @@ const Navbar = () => {
         <header className="header flex">
             <div className="logoDiv">
                 <a href="/#" className="logo flex">
-                    <h1 className="/#"> <MdTravelExplore className="icon"/>Travel.</h1>
+                    <img src={img} alt="logo"  style={{ width: '30px', height: '30px' }}  /> 
+                    <h1 className="/#">  Rainbow Travel</h1>
                 </a>
             </div>
             <div className={active}>

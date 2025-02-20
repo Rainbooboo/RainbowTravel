@@ -128,7 +128,7 @@ const Main = () => {
             return (
               <div data-aos="fade-up" key={id} className="singleDestination">
                 <div className="imageDiv">
-                  <img src={imgSrc} alt={destTitle} srcset="" />
+                  <img src={imgSrc} alt={destTitle} srcSet="" />
                 </div>
                 <div className="cardInfo">
                   <h4 className="descTitle">{destTitle}</h4>

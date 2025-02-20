@@ -1,18 +1,20 @@
 import React from 'react'
 import './App.css';
-import Navbar from './components/Navbar/navbar';
-import Main from './components/Main/main';
-import Footer from './components/Footer/footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout/layout';
 import Home from './components/Home/home';
-
+import Packages from './components/Packages/Packages';
 const App = () => {
   return (
     <>
-    <Navbar/>
-    <Home/> 
-    <Main/>
-    <Footer/>
-   
+   <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="packages" element={<Packages />} />
+        </Route>
+      </Routes>
+    </Router>
     </>
   )
 }

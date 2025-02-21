@@ -4,6 +4,7 @@ import './navbar.scss';
 import { IoIosCloseCircle } from "react-icons/io";
 import { TbGridDots } from "react-icons/tb";
 import img from '../../assets/logo.png'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const  [active, setaActive] = useState('navBar');
@@ -28,29 +29,15 @@ const Navbar = () => {
             </div>
             <div className={active}>
                 <ul className="navLists flex">
-                    <li className="navItem">
-                        <a href="/#" className="navLink">Home</a>
-                    </li>
-                    <li className="navItem">
-                        <a href="/packages" className="navLink">Packages</a>
-                    </li>
-                    <li className="navItem">
-                        <a href="/#" className="navLink">Shop</a>
-                    </li>
-                    <li className="navItem">
-                        <a href="/#" className="navLink">Amount</a>
-                    </li>
-                    <li className="navItem">
-                        <a href="/#" className="navLink">Pages</a>
-                    </li>
-                    <li className="navItem">
-                        <a href="/#" className="navLink">News</a>
-                    </li>
-                    <li className="navItem">
-                        <a href="//#" className="navLink">Contact</a>
-                    </li>
+                    <li className="navItem"><Link to="/" className="navLink">Home</Link></li>
+                    <li className="navItem"><Link to="/packages" className="navLink">Packages</Link></li>
+                    <li className="navItem"><Link to="/hotels" className="navLink">Hotels</Link></li>
+                    <li className="navItem"><Link to="/shop" className="navLink">Shop</Link></li>
+                    <li className="navItem"><Link to="/pages" className="navLink">Pages</Link></li>
+                    <li className="navItem"><Link to="/news" className="navLink">News</Link></li>
+                    <li className="navItem"><Link to="/contact" className="navLink">Contact</Link></li>
                     <button className="btn">
-                        <a href="/#">BOOK NOW</a>
+                        <Link to="/packages">BOOK NOW</Link>
                     </button>
                 </ul>
                 <div onClick={closeNavbar} className="closeNavbar">

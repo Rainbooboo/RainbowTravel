@@ -1,0 +1,73 @@
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(113, 120, 123);
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    mix-blend-mode: hard-light;
+
+}
+.img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+
+.pageTitle{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.hotelSection{
+    padding: 2.4rem 8rem;
+    display: flex;
+    gap: 3rem
+}
+
+.cont{
+    width: 25%;
+}
+
+.searchDiv{
+    padding: 25px;
+    border: 1px solid var(--cardGB);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f9faff;
+}
+.title{
+    font-size: 18px;
+    font-weight: 500;
+}
+.range{
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    input{
+        width: 38%;
+        padding: .2rem .9rem;
+        border: none;
+        background-color: transparent;
+    }
+    .rightAlign{
+        text-align: right;
+    }
+}
+.ratingsDiv{
+    margin-top: 2rem;
+}
+.hotelsDiv{
+    width: 75%;
+}
+
+

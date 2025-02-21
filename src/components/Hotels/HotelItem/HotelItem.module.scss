@@ -1,0 +1,145 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.secContent {
+    justify-content: center;
+    gap: 1.5rem;
+
+    .singleDestination {
+        height: 100%;
+        display: grid;
+        row-gap: 10px;
+        /* padding: 1rem; */
+        border-radius: 10px;
+        align-items: center;
+        background-color: var(--cardGB);
+        box-shadow: 0 2px 4px rgba(140, 140, 141, 0549);
+        overflow: hidden;
+
+        &:hover {
+            background: var(--cardHover);
+            box-shadow: 1px 4px 4px rgba(85, 85, 114, 0549);
+            transition: .3s ease;
+        }
+
+        .imageDiv {
+            height: 180px;
+            width: 100%;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: 2s ease;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .cardInfo {
+            padding: .5rem 1rem 1rem;
+
+            .basicInfo {
+                display: flex;
+                justify-content: space-between;
+
+                .descTitle {
+                    color: var(-- blackColor);
+                    font-size: 1.35rem;
+                    font-weight: 500;
+                }
+
+                .priceDiv {
+                    color: var(--blackColor);
+                    .price{
+                        font-size: 1.6rem;
+                    }
+                    small{
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+
+            .continent {
+                gap: .5rem;
+
+                .icon {
+                    color: var(--textColor);
+                    font-size: 18px;
+
+                }
+
+                .name {
+                    color: var(-- textColor);
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+            }
+
+            .fees {
+                width: 100%;
+                justify-content: space-between;
+                padding: 1rem;
+                margin: 1rem 0;
+                border-top: 1.5px solid var(--greyText);
+                border-bottom: 1.5px solid var(--greyText);
+
+                .grade {
+                    color: var(-- textColor);
+                    max-width: 100px;
+                    line-height: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    small {
+                        text-align: center;
+                        background: var(--gradientColor);
+                        border-radius: 1rem;
+                        color: var(-- whiteColor);
+                        padding: 1px 10px;
+                        font-size: 10px;
+
+                    }
+                }
+
+            }
+
+            .desc {
+
+                font-size: 13.5px;
+                color: var(--textColor);
+                font-weight: 500;
+
+            }
+
+            .btn {
+                margin-top: 1rem;
+                color: var(--whiteColor);
+                font-weight: 600;
+                justify-content: space-between;
+                gap: .5rem;
+
+                .icon {
+                    align-self: center;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+}
+
+.pagination{
+    margin: 4rem auto;
+    display: flex;
+    justify-content: center;
+}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React , { useState, useEffect }  from 'react'
 // import hotel from '../../assets/hotel.jpg'
 import hotel2 from '../../assets/hotel2.jpg'
 import styles from './Hotels.module.scss'
@@ -7,6 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Slider from '@mui/material/Slider';
 import StarRatings from './StarRatings/StarRatings';
 import HotelItem from './HotelItem/HotelItem';
+import axios from 'axios'
 
 const countries = [
     { value: 'NG', label: 'Nigeria' },
@@ -19,6 +20,41 @@ const countries = [
 
 
 const Hotels = () => {
+    
+    const [query, setQuery] = useState([]);
+    const [geoId, setGeoId] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+  
+    useEffect(() => {
+      const fetchHotels = async () => {
+        try {
+          const options = {
+            method: 'GET',
+            url: process.env.TRAVEL_API_URL,
+            params: {
+              query: query,
+            },
+            headers: {
+              'x-rapidapi-key': process.env.RAPIDAPI_KEY,
+              'x-rapidapi-host': process.env.RAPIDAPI_HOST,
+            },
+          };
+  
+          const response = await axios.request(options);
+          setGeoId(response.data);
+          console.log(response.data[0].geoId);
+        } catch (err) {
+          console.error(err);
+          setError('Error fetching hotel data.');
+        } finally {
+          setLoading(false);
+        }
+      };
+  
+      fetchHotels();
+    }, [query]);
+
     return (
         <>
             <section className="home">
@@ -50,7 +86,7 @@ const Hotels = () => {
                             </div>
                             <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" min={10000} max={500000} color='primary' />
                         </div>
-                        <button className="btn" style={{ borderRadius: '5px', color: 'white' }}>Searchs</button>
+                        <button className="btn" style={{ borderRadius: '5px', color: 'white' }}>Search</button>
                     </div>
                     <div className={styles.ratingsDiv}>
                         <StarRatings/>

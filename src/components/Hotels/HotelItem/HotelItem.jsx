@@ -77,7 +77,7 @@ const HotelItem = () => {
   }, []);
 
   if (loading) return <p>Loading hotels...</p>;
-  if (error) return <p>{error}</p>;
+  // if (error) return <p>{error}</p>;
   
   return (
     <>

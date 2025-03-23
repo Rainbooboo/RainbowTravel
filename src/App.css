@@ -65,6 +65,15 @@ li {
   outline: none;
   cursor: pointer;
 }
+.btn-outline {
+  padding: .6rem 1.5rem;
+  background: transparent;
+  border: solid 1px var(--SecondaryColor);
+  color: var(--SecondaryColor);
+  border-radius: 3rem;
+  outline: none;
+  cursor: pointer;
+}
 
 .btn a {
   color: var(--whiteColor);

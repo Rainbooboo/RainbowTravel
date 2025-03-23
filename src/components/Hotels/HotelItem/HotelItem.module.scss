@@ -94,8 +94,6 @@
 
                 .grade {
                     color: var(-- textColor);
-                    max-width: 100px;
-                    line-height: 20px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -138,6 +136,16 @@
 
 }
 
+.cardInfo p {
+    height: 60px; /* Adjust as needed */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limits to 3 lines */
+    -webkit-box-orient: vertical;
+  }
+
+  
 .pagination{
     margin: 4rem auto;
     display: flex;

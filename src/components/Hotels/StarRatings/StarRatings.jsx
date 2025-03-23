@@ -1,6 +1,6 @@
 import { Checkbox, FormGroup, FormControlLabel, Box } from '@mui/material';
 import { Star, StarBorder } from '@mui/icons-material';
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 const StarRatings = ({ onRatingChange }) => {
   const starRatings = [5, 4, 3, 2, 1];
@@ -11,16 +11,10 @@ const StarRatings = ({ onRatingChange }) => {
     setSelectedRatings((prevRatings) => {
       const newSelectedRatings = event.target.checked? [...prevRatings, stars] : prevRatings.filter((r) => r !== stars);
   
+      onRatingChange(newSelectedRatings);
       return newSelectedRatings;
     });
   };
-  
-  useEffect(() => {
-    onRatingChange(selectedRatings);
-    // console.log(selectedRatings)
-  }, [selectedRatings]); // Runs whenever selectedRatings changes
-  
-
 
   return (
     <Box sx={{ backgroundColor: '#f9faff', border: 'solid 1px', borderColor: 'rgb(225, 225, 235)', padding: 2, borderRadius: 2 }}>

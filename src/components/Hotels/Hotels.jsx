@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, } from 'react'
 // import hotel from '../../assets/hotel.jpg'
 import hotel2 from '../../assets/hotel2.jpg'
 import styles from './Hotels.module.scss'
@@ -18,13 +18,13 @@ const Hotels = () => {
   const [locations, setLocations] = useState([]); //for list of locations
   const [allHotels, setAllHotels] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
   const [filteredHotels, setFilteredHotels] = useState([]);
 
 
   // Search criteria state
-  const [checkIn, setCheckIn] = useState('');
-  const [checkOut, setCheckOut] = useState('');
+  // const [checkIn, setCheckIn] = useState('');
+  // const [checkOut, setCheckOut] = useState('');
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
   const [selectedLocation, setSelectedLocation] = useState('');
@@ -52,7 +52,6 @@ const Hotels = () => {
         setFilteredHotels(response.data.hotels);
       } catch (err) {
         console.error('Error fetching data', err);
-        setError('Error fetching data');
       } finally {
         setLoading(false);
       }
@@ -89,7 +88,6 @@ const Hotels = () => {
       setCurrentPage(1);
     } catch (err) {
       console.error('Error fetching hotels', err);
-      setError('Error fetching hotels');
     } finally {
       setLoading(false);
     }
